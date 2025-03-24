@@ -1,0 +1,26 @@
+digraph G {
+    rankdir=BT;
+    "213b3058-2a50-4220-82ee-3ccaf35719ad" [label="Start", shape="cylinder"];
+    "e9bd5af3-0a96-4bd8-9337-4b977a801b3f" [label="Data Collection", shape="rectangle"];
+    "12c31d89-7098-4fe3-9ec9-de47fb0af584" [label="Reconciliation", shape="rectangle"];
+    "66c99e40-62fa-4a88-9267-bf43fd4741b1" [label="Journal Entries and Adjustments", shape="rectangle"];
+    "1b606c74-5387-4a32-82bb-4fd01afa2726" [label="Review Financial Statements", shape="rectangle"];
+    "2d2fdfdd-ce64-4564-b790-04ccc967d5a9" [label="Are Financial Statements Accurate?", shape="box3d"];
+    "574fb6eb-4371-4473-9680-e19fde0c3249" [label="Investigate and resolve discrepancies", shape="rectangle"];
+    "3df4d829-2531-46f0-beee-e839a20fad39" [label="Final Reporting", shape="rectangle"];
+    "40e08593-1f5f-4b0e-832f-8bf42eb0d278" [label="Internal Review and Approvals", shape="rectangle"];
+    "175e6583-253e-4276-91d6-e058b716603b" [label="Close Period", shape="rectangle"];
+    "9a73a1d7-9f5f-4434-b706-26f3df0d274a" [label="End", shape="cylinder"];
+
+    "213b3058-2a50-4220-82ee-3ccaf35719ad" -> "e9bd5af3-0a96-4bd8-9337-4b977a801b3f" [label="."];
+    "e9bd5af3-0a96-4bd8-9337-4b977a801b3f" -> "12c31d89-7098-4fe3-9ec9-de47fb0af584" [label="."];
+    "12c31d89-7098-4fe3-9ec9-de47fb0af584" -> "66c99e40-62fa-4a88-9267-bf43fd4741b1" [label="."];
+    "66c99e40-62fa-4a88-9267-bf43fd4741b1" -> "1b606c74-5387-4a32-82bb-4fd01afa2726" [label="."];
+    "1b606c74-5387-4a32-82bb-4fd01afa2726" -> "2d2fdfdd-ce64-4564-b790-04ccc967d5a9" [label="."];
+    "2d2fdfdd-ce64-4564-b790-04ccc967d5a9" -> "574fb6eb-4371-4473-9680-e19fde0c3249" [label="No"];
+    "2d2fdfdd-ce64-4564-b790-04ccc967d5a9" -> "3df4d829-2531-46f0-beee-e839a20fad39" [label="Yes"];
+    "574fb6eb-4371-4473-9680-e19fde0c3249" -> "1b606c74-5387-4a32-82bb-4fd01afa2726" [label="."];
+    "3df4d829-2531-46f0-beee-e839a20fad39" -> "40e08593-1f5f-4b0e-832f-8bf42eb0d278" [label="."];
+    "40e08593-1f5f-4b0e-832f-8bf42eb0d278" -> "175e6583-253e-4276-91d6-e058b716603b" [label="."];
+    "175e6583-253e-4276-91d6-e058b716603b" -> "9a73a1d7-9f5f-4434-b706-26f3df0d274a" [label="."];
+}

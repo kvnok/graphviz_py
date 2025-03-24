@@ -1,0 +1,16 @@
+digraph G {
+    "7fc85712-afe6-4371-b3ce-3b0683b8c56f" [label="Previous Consensus"];
+    "5140c1fe-1a33-48ae-aeb0-1bb90385b6c2" [label="Make an edit"];
+    "259d699f-c18e-4597-80a4-76c02ad677e1" [label="Seek the compromise"];
+    "fd6863dd-b978-4b09-a763-a7ee3376200d" [label="Was the article edited further?"];
+    "473b5fea-d7d1-4cca-98ef-8b8a1b263147" [label="Do you agree with the changes?"];
+    "3fc1b6e8-00f6-4029-9a47-8a5826cded50" [label="New consensus"];
+
+    "7fc85712-afe6-4371-b3ce-3b0683b8c56f" -> "5140c1fe-1a33-48ae-aeb0-1bb90385b6c2" [label="."];
+    "259d699f-c18e-4597-80a4-76c02ad677e1" -> "5140c1fe-1a33-48ae-aeb0-1bb90385b6c2" [label="Implement"];
+    "5140c1fe-1a33-48ae-aeb0-1bb90385b6c2" -> "fd6863dd-b978-4b09-a763-a7ee3376200d" [label="."];
+    "fd6863dd-b978-4b09-a763-a7ee3376200d" -> "473b5fea-d7d1-4cca-98ef-8b8a1b263147" [label="Yes"];
+    "fd6863dd-b978-4b09-a763-a7ee3376200d" -> "3fc1b6e8-00f6-4029-9a47-8a5826cded50" [label="No"];
+    "473b5fea-d7d1-4cca-98ef-8b8a1b263147" -> "259d699f-c18e-4597-80a4-76c02ad677e1" [label="Disagree"];
+    "473b5fea-d7d1-4cca-98ef-8b8a1b263147" -> "3fc1b6e8-00f6-4029-9a47-8a5826cded50" [label="Agree"];
+}

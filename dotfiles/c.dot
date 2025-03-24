@@ -1,0 +1,17 @@
+digraph G {
+    "start" [label="Start", shape="cylinder"];
+    "input_credentials" [label="Input Credentials", shape="rectangle"];
+    "validate_credentials" [label="Validate Credentials", shape="rectangle"];
+    "credentials_valid" [label="Are Credentials Valid?", shape="diamond"];
+    "access_granted" [label="Access Granted", shape="rectangle"];
+    "access_denied" [label="Access Denied", shape="rectangle"];
+    "end" [label="End", shape="cylinder"];
+
+    "start" -> "input_credentials" [label="."];
+    "input_credentials" -> "validate_credentials" [label="."];
+    "validate_credentials" -> "credentials_valid" [label="."];
+    "credentials_valid" -> "access_granted" [label="Yes"];
+    "credentials_valid" -> "access_denied" [label="No"];
+    "access_granted" -> "end" [label="."];
+    "access_denied" -> "input_credentials" [label="."];
+}
